@@ -1,0 +1,34 @@
+.info {
+    width: 55px;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+ion-button,ion-label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.table {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ion-content{  
+    --background: #01a3a4;
+    // --background: #fff url('/assets/imgs/background.png') no-repeat center center / cover;
+}
+
+.new-background-color{
+    // --background: #009432;
+    --background:#10ac84;
+}
+
+

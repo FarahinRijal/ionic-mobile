@@ -8,6 +8,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,12 +19,17 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation,
+    LaunchNavigator,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,25 @@
+<ion-fab horizontal="end" vertical="bottom" slot="fixed">
+  <ion-fab-button color="dark">
+    <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="light" (click)="login()">
+      <ion-icon name="log-in"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light" (click)="register()">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="light" (click)="setting()">
+      <ion-icon name="settings"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-content>
+  <br/><br/><br/><br/><br/>
+  <ion-img src="/assets/imgs/banner.png"></ion-img>
+  <br/>
+  <ion-button expand="block" size="large" color="#293751"  (click)="search()">Carian&nbsp;&nbsp;<ion-icon name="search"></ion-icon></ion-button><p></p>
+  <ion-button expand="block" size="large" color="#293751"  (click)="registerkematian()">Daftar Kematian&nbsp;&nbsp;<ion-icon name="create"></ion-icon></ion-button><p></p>
+  <ion-button expand="block" size="large" color="#293751"  (click)="analysis()">Analisis Data&nbsp;&nbsp;<ion-icon name="bar-chart"></ion-icon></ion-button><p></p>
+</ion-content>
