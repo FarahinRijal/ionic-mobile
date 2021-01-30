@@ -1,9 +1,62 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar class="new-background-color">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-back-button defaultHref="/userhome"  icon="arrow-undo"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+    <ion-grid>
+      <ion-row color="primary"style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+        <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h2> Daftar Akaun Baru</h2><br/>
+          </div>
+          <ion-card>
+            <form [formGroup]="registerForm">
+              
+              <div padding>
+                <ion-item>
+                  <ion-label position="floating">Nama Penuh</ion-label>
+                  <ion-input formControlName="fullname" type="text" [(ngModel)]="postData.fullname" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">E-mel</ion-label>
+                  <ion-input formControlName="email" type="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" [(ngModel)]="postData.email" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Nombor Telefon</ion-label>
+                  <ion-input formControlName="phone" type="number" [(ngModel)]="postData.phone" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Pekerjaan</ion-label>
+                  <ion-input formControlName="job" type="text" [(ngModel)]="postData.job" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Nama Pengguna</ion-label>
+                  <ion-input formControlName="username" type="text" [(ngModel)]="postData.username" required></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Kata Laluan</ion-label>
+                  <ion-input formControlName="password" type="password" [(ngModel)]="postData.password" required></ion-input>
+                </ion-item>
+              </div>
+              <div padding>
+                <ion-button  size="normal" type="submit" (click)="registerAction()"  [disabled]="!registerForm.valid" expand="block">Daftar</ion-button>
+              </div><br/>
+            </form>
+          </ion-card>  
+        </ion-col>
+      </ion-row>
+    </ion-grid> 
 </ion-content>
+
+  
+

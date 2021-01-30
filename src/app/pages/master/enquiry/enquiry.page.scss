@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  ion-button{
+    width: fit-content;
+}
+
+  h2,h6{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+  p{
+    font-size: x-small;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  ion-input, .label{
+    font-size: smaller;
+  }
+
+  ion-content{  
+      --background: #01a3a4;
+  }
+
+  .new-background-color{
+    --background:#10ac84;
+  }

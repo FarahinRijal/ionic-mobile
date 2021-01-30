@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-segment color="dark" >
+    <ion-segment-button value="dashboard" (click)="dashboard()">
+      <ion-label>Dashboard</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="calculator">
+      <ion-label>Kalkulator</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-card>
+    <form [formGroup]="luasForm">
+      <ion-card-title>
+        <b><h2>Keluasan Tanah Perkuburan Yang Masih Tinggal</h2></b>
+      </ion-card-title>
+      <ion-card-content>
+
+        <p>Keluasan Keseluruhan (m<sup>2</sup>)</p>
+        <ion-item>
+          <ion-input [(ngModel)]="luas" formControlName="luas" type="text"></ion-input>
+        </ion-item>
+
+        <p>Bilangan Plot Yang Telah Digunakan</p>
+        <ion-item>
+          <ion-input [(ngModel)]="plot" formControlName="plot" type="text"></ion-input>
+        </ion-item>
+
+        <p>Luas Satu Plot (m<sup>2</sup>)</p>
+        <ion-item>
+          <ion-input  [(ngModel)]="panjang" formControlName="panjang"  placeholder="panjang(m)" type="text"></ion-input> 
+        </ion-item>
+        <ion-item>  
+          <ion-input  [(ngModel)]="lebar" formControlName="lebar" placeholder="lebar(m)" type="text"></ion-input>   
+        </ion-item>
+
+        <ion-button  size="normal" type="submit" (click)="Tinggal()" expand="block">Kira</ion-button>
+
+        <strong>Luas Tanah : {{this.tinggal | number:'1.0-0'}} m<sup>2</sup> </strong>
+
+      </ion-card-content>    
+    </form>
+  </ion-card>
+  
+  <ion-card>
+    <form [formGroup]="masaForm">
+      <ion-card-title>
+        <b><h2>Jangka Masa Tanah Penuh</h2></b>
+      </ion-card-title>
+
+      <ion-card-content>        
+        <p>Luas Tanah  yang Telah Digunakan (m<sup>2</sup>)</p>
+        <ion-item>
+          <ion-input [(ngModel)]="luastanah" formControlName="luastanah" type="text"></ion-input>
+        </ion-item>
+
+        <p>Bilangan Kematian Dalam Masa Sebulan</p>
+        <ion-item>
+          <ion-input [(ngModel)]="matisebulan" formControlName="matisebulan" type="text"></ion-input>
+        </ion-item>
+
+        <p>Luas Satu Plot (m<sup>2</sup>)</p>
+        <ion-item>
+          <ion-input  [(ngModel)]="length" formControlName="length"  placeholder="panjang(m)" type="text"></ion-input> 
+        </ion-item>
+        <ion-item>  
+          <ion-input  [(ngModel)]="width" formControlName="width" placeholder="lebar(m)" type="text"></ion-input>   
+        </ion-item>
+
+        <ion-button  size="normal" type="submit" (click)="JangkaMasa()" expand="block">Kira</ion-button>
+                
+        <strong>Jangka Masa : {{jangkamasa | number:'1.0-0'}} bulan</strong>
+      </ion-card-content>    
+    </form>
+  </ion-card>
+
+</ion-content>

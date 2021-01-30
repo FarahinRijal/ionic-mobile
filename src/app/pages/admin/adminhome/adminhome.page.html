@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()" style="padding-right: 15px;">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <div text-center>
+          <h2>Menu Utama</h2><br/>
+        </div>
+        
+        <ion-button expand="block" size="large" color="293751"  (click)="carian()">Carian Kematian&nbsp;&nbsp;<ion-icon name="search"></ion-icon></ion-button><br/>
+        <ion-button expand="block" size="large" color="293751"  (click)="daftarkematian()">Daftar Kematian&nbsp;&nbsp;<ion-icon name="create"></ion-icon></ion-button><br/>
+        <ion-button expand="block" size="large" color="#293751" (click)="analysis()">Analisis Data&nbsp;&nbsp;<ion-icon name="podium"></ion-icon></ion-button><br/>
+        <ion-button expand="block" size="large" color="293751"  (click)="semakan()">Semakan Data&nbsp;&nbsp;<ion-icon name="newspaper"></ion-icon></ion-button><br/>
+        <ion-button expand="block" size="large" color="293751"  (click)="laporan()">Laporan Data&nbsp;&nbsp;<ion-icon name="receipt"></ion-icon></ion-button>
+
+</ion-content> 

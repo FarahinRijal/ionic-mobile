@@ -1,0 +1,27 @@
+ion-title {
+    text-align: center;
+    margin-right: 60px;
+}
+
+ion-card-title {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+ion-content{  
+    --background: #01a3a4;
+    // --background: #fff url('/assets/imgs/background.png') no-repeat center center / cover;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.new-background-color{
+    // --background: #009432;
+    --background:#10ac84;
+}

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()" style="padding-right: 15px;"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adminhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="refresh()">
+    <ion-icon name="refresh"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<ion-content>
+  <ion-segment color="dark" >
+    <ion-segment-button value="dashboard">
+      <ion-label>Dashboard</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="calculator" (click)="calculator()">
+      <ion-label>Kalkulator</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+  <ion-grid>
+    <ion-row color="primary"style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+      <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <ion-card class="welcome-card">
+          <ion-card-title>
+              <h6>Jumlah Kematian Mengikut Tahun</h6>
+              <canvas #lineChart></canvas>
+          </ion-card-title>
+        </ion-card>
+
+        <ion-card>
+          <h6>Keluasan Tanah Perkuburan Yang Masih Tinggal </h6>
+          <ion-card-content>
+            <div *ngFor="let row of data[0]">
+              <p> {{row.keseluruhan}} - ({{row.bilplot}} * {{row.luasplot}})= {{row.luastanah | number:'1.0-0'}} m<sup>2</sup></p><br/>                   
+            </div> 
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <h6>Jangka Masa Tanah Penuh Dalam Masa Sebulan </h6>
+          <ion-card-content>
+            <div *ngFor="let col of data[1]">
+              <p> {{col.tanah}} / {{col.kematian}} * {{col.luas}} = {{col.jangka  | number:'1.0-0'}} bulan</p><br/>                   
+            </div> 
+          </ion-card-content>
+        </ion-card>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,46 @@
+ion-title {
+    text-align: center;
+    margin-right: 60px;
+}
+
+ion-card-title {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+ion-content{  
+    --background: #01a3a4;
+    // --background: #fff url('/assets/imgs/background.png') no-repeat center center / cover;
+}
+
+.new-background-color{
+    // --background: #009432;
+    --background:#10ac84;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+
+ion-button {
+    padding-right: 25%;
+    padding-left: 25%;
+}

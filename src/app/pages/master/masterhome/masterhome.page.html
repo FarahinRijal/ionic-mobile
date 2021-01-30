@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar  class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br/><br/>
+  <ion-img src="/assets/imgs/banner.png"></ion-img>
+  
+  <ion-card class="request" button (click)="request()">
+    <ion-card-title>PERMOHONAN ADMIN</ion-card-title>
+  </ion-card>
+
+  <ion-card class="enquiry" button (click)="enquiry()">
+    <ion-card-title>MESEJ/PERTANYAAN</ion-card-title>
+  </ion-card>
+  
+</ion-content>
+

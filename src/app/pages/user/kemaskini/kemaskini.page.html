@@ -1,0 +1,51 @@
+<ion-header>  
+  <ion-toolbar>
+      <ion-buttons slot="end">
+          <ion-button color="danger" (click)="dismiss()">
+            <span ion-text color="primary" showWhen="ios"></span>
+            <ion-icon name="close" showWhen="android,windows"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+    <ion-title class="label">Kemaskini Maklumat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="update()" [formGroup]="updateForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Nama Penuh :  <span>{{passedId.nama}}</span></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pembetulan :  </ion-label>
+        <ion-input type="text" class="input" formControlName="corrnama" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tarikh Lahir :  <span>{{passedId.dob | date: 'dd/MM/yyyy'}}</span></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pembetulan :  </ion-label>
+        <ion-datetime displayFormat='DD/MM/YYYY' formControlName="corrdob"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tarikh Kematian :  <span>{{passedId.dod | date: 'dd/MM/yyyy'}}</span></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pembetulan :  </ion-label>
+        <ion-datetime displayFormat='DD/MM/YYYY' formControlName="corrdod"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Plot Kubur :  <span>{{passedId.plot}}</span></ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Pembetulan :  </ion-label>
+        <ion-input type="text" class="input" formControlName="corrplot" ></ion-input>
+      </ion-item>
+    </ion-list><br/>
+    <div class="button">
+      <ion-button color="success" size="medium"  type="submit">Simpan</ion-button>
+      <ion-button color="danger" (click)="close()">Batal</ion-button>
+    </div>
+  </form>
+    
+</ion-content>

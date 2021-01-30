@@ -1,9 +1,37 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>setting</ion-title>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/userhome" icon="arrow-undo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <!-- <ion-img src="/assets/imgs/banner2.png" ></ion-img> -->
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <br/><br/><br/>
+  <ion-img src="/assets/imgs/banner.png"></ion-img>
+  <br/>
+    
+  <ion-button expand="block" class="background-color" size="large"(click)="info()">Informasi&nbsp;&nbsp;<ion-icon name="information-circle"></ion-icon></ion-button><p></p>
+  <ion-button class="background-color" expand="block" size="large" (click)="contact()">Hubungi&nbsp;&nbsp;<ion-icon name="call"></ion-icon></ion-button><p></p>
+  <ion-button class="background-color" expand="block" size="large"  (click)="feedback()">Maklum Balas&nbsp;&nbsp;<ion-icon name="document-text"></ion-icon></ion-button><p></p>
 
+  <!-- <ion-img src="/assets/imgs/banner.png"></ion-img>
+  <br/>
+  <ion-card button (click)="info()">
+    <ion-card-title class="info"> Informasi <ion-icon name="information-circle"></ion-icon></ion-card-title>
+  </ion-card>
+
+  <ion-card button (click)="contact()">
+    <ion-card-title class="contact"> Hubungi <ion-icon name="call"></ion-icon></ion-card-title>
+  </ion-card>
+          
+  <ion-card button (click)="feedback()">
+    <ion-card-title class="feedback"> Maklum Balas <ion-icon name="document-text"></ion-icon></ion-card-title>
+  </ion-card> -->
 </ion-content>

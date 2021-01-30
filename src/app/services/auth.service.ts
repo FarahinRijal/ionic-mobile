@@ -34,7 +34,7 @@ import { EnvService } from './env.service';
     login(username: string, password: string) {
       var body = {
         username: username,
-        password:password
+        password: password
       } 
       console.log('form input:',body);
       return this.http.post(this.env.API_URL + '/php/loginid.php', JSON.stringify(body));
@@ -173,16 +173,17 @@ import { EnvService } from './env.service';
     }
 
      //ACCEPT LAPORAN DATA KEMATIAN
-     acceptlaporan(name:string, dob:string, dod:string, plot:string, corrname:string, corrdob:string, corrdod:string, corrplot:string,testkubur_id:number) {
+     acceptlaporan(id:number,name:string, dob:string, dod:string, plot:string, corrname:string, corrdob:string, corrdod:string, corrplot:string,testkubur_id:number) {
       var body = {
-        // userid: id,
+        
+        id: id,
         nama: name,
-        dob: dob,
-        dod: dod,
-        plot: plot,
         corrnama: corrname,
+        dob: dob,
         corrdob: corrdob,
+        dod: dod,
         corrdod: corrdod,
+        plot: plot,
         corrplot: corrplot,
         testkubur_id: testkubur_id
       }

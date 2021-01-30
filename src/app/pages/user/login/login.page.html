@@ -1,9 +1,46 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar class="new-background-color">
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-back-button defaultHref="/userhome"  icon="arrow-undo"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-grid>
+      <ion-row color="primary" style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+        <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+              <h2>Log Masuk Pengguna</h2><br/>
+          </div>
+          <ion-card>
+            <form [formGroup]="loginForm">
+              <div padding>
+                <ion-list>
+                  <ion-item>
+                    <ion-label position="floating">Nama Pengguna</ion-label>
+                    <ion-input autocomplete="off" type="text" formControlName="username" [(ngModel)]="postData.username" required></ion-input>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label position="floating">Kata Laluan</ion-label>
+                    <ion-input autocomplete="off" type="password" formControlName="password" [(ngModel)]="postData.password" required></ion-input>
+                  </ion-item>
+                </ion-list>
+              </div>
+              <div padding>
 
+              </div><br/>
+              <ion-button expand="block" (click)="loginAction()"  [disabled]="!loginForm.valid">Log Masuk</ion-button><br/>
+            </form>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()" style="padding-right: 15px;"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adminhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-grid>
+    <ion-row color="primary"style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+      <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+            <h2> Daftar Kematian</h2><br/>
+        </div>
+        <ion-card>
+          <form [formGroup]="dkForm">          
+            <div padding>
+              <ion-item>
+                <ion-label position="floating">Nama Pendaftar</ion-label>
+                <ion-input formControlName="userid" type="text" [(ngModel)]="postData.userid" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Nama Si Mati</ion-label>
+                <ion-input formControlName="name" type="text" [(ngModel)]="postData.name" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Tarikh Lahir</ion-label>
+                <ion-datetime displayFormat='DD/MM/YYYY' formControlName="dob"  [(ngModel)]="postData.dob"></ion-datetime>
+              </ion-item> 
+              <ion-item>
+                <ion-label position="floating">Tarikh Kematian</ion-label>
+                <ion-datetime displayFormat='DD/MM/YYYY' formControlName="dod"  [(ngModel)]="postData.dod"></ion-datetime>
+              </ion-item> 
+              <ion-item>
+                <ion-label position="floating">Plot Kubur</ion-label>
+                <ion-input placeholder="123" formControlName="plot" type="text" [(ngModel)]="postData.plot" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Lokasi</ion-label>
+                <ion-select placeholder="Pilih" formControlName="location" [(ngModel)]="postData.location">
+                  <ion-select-option  *ngFor="let loc of locList" [value]="loc">{{loc}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <h6>Bagi membaca latitude dan longitude plot kubur, anda harus berada dilokasi kubur tersebut.</h6>
+              <ion-button (click)="detect()" size="small">Baca Lokasi</ion-button>
+              <ion-item>
+                <ion-label position="fixed">Latitude</ion-label>
+                <ion-input formControlName="latitude" type="number" [(ngModel)]="postData.latitude">{{latitude}}</ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="fixed">Longitude</ion-label>
+                <ion-input formControlName="longitude" type="number" [(ngModel)]="postData.longitude"> {{longitude}}</ion-input>
+              </ion-item>
+            </div><br/>
+            <div padding>
+              <ion-button  size="normal" type="submit" (click)="dkAction()"  [disabled]="!dkForm.valid" expand="block">Daftar</ion-button><br/>
+            </div>
+          </form> 
+        </ion-card>          
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+</ion-content>

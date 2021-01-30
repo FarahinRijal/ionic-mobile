@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar  class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/masterhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="refresh()">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div text-center>
+          <h2>Pertanyaan / Mesej</h2>
+          <h6>Sila balas pertanyaan pengguna menggunakan email anda di ruangan email sendiri.</h6>
+        </div>
+
+        <ion-card  *ngFor="let d of data[0]">
+          <ion-item>
+            <ion-label class="label">Nama :&nbsp;</ion-label>
+            <ion-input readonly >{{d.name}}</ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label">Emel :&nbsp; </ion-label>
+            <ion-input readonly >{{d.email}}</ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label class="label">Pertanyaan :&nbsp;</ion-label>
+            <ion-input readonly >{{d.enquiry}}</ion-input>
+          </ion-item>
+
+          <ion-item class="button">
+            <p>Tekan butang '/' selepas anda selesai membalas di email sendiri</p>
+            <ion-button  slot="end" expand="block" color="success" (click)="reply(d.name, d.email, d.enquiry, d.status)"><ion-icon slot="icon-only" name="checkmark" ></ion-icon></ion-button>
+          </ion-item>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

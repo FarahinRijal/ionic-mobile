@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/masterhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="refresh()">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div text-center>
+          <h2>Permohonan sebagai Admin</h2>
+        </div>
+        <ion-card  *ngFor="let d of data[0]">
+          <ion-item>
+            <ion-label class="label">Nama :&nbsp;</ion-label>
+            <ion-input readonly>{{d.fullname}}</ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label">No.Telefon :&nbsp; </ion-label>
+            <ion-input readonly>{{d.phone}}</ion-input>
+          </ion-item>
+          
+          <ion-item class="button"> 
+            <ion-button  slot="end" (click)="addRow(d.fullname,d.username,d.email,d.password,d.phone, d.job)" size="small" expand="block" color="success"><ion-icon slot="icon-only" name="checkmark" ></ion-icon></ion-button>
+             
+            <ion-button  slot="end" (click)="deleteRow(d.fullname,d.username,d.email,d.password,d.phone, d.job)" size="small" expand="block" color="danger"><ion-icon slot="icon-only" name="trash" ></ion-icon></ion-button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

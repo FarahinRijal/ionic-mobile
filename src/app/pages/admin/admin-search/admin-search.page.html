@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()" style="padding-right: 15px;"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adminhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col> 
+        <div text-center>
+          <h2>Carian Maklumat</h2><br/>
+        </div>  
+        <ion-card>
+          <form [formGroup]="form">
+            <div>
+              <ion-list>
+                <ion-item>
+                  <ion-label>Lokasi</ion-label>
+                  <ion-select formControlName="location" [(ngModel)]="postData.location">
+                    <ion-select-option  *ngFor="let loc of locList" [value]="loc">{{loc}}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                  <ion-input autocomplete="on" type="text" formControlName="name" [(ngModel)]="postData.name" placeholder="carian nama.." required></ion-input>
+                </ion-item>
+              </ion-list>
+            </div>
+            <ion-button expand="block" (click)="submit()" [disabled]="!form.valid" >Carian</ion-button>
+          </form> 
+        </ion-card>     
+       
+        <div class="container">
+          <div class="column is-centered">
+          <table class="table">
+            <tr  *ngFor="let currentName of response[0]  ">
+              <td>{{currentName.nama}}</td>
+              <td><ion-button type="submit" color="primary" size="small" (click)="OpenModal(currentName)">Info</ion-button></td>
+            </tr>
+          </table> 
+          </div>  
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

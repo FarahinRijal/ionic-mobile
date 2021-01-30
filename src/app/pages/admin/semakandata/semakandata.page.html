@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end" (click)="logout()" style="padding-right: 15px;"><ion-icon slot="icon-only" name="log-out-outline"></ion-icon></ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/adminhome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="refresh()">
+    <ion-icon name="refresh"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row color="primary"style="height: 100%;" class="ion-align-items-center ion-justify-content-center">
+      <ion-col class="align-self-center" size-md="6" size-lg="5" size-xs="12">    
+        <div text-center>
+            <h2>Pendaftaran Baru Kematian</h2><br/>
+        </div>
+        <ion-card *ngFor="let d of data[0]">
+          <ion-card-content>
+            <p> Nama Penuh : {{d.name}} </p> 
+
+            <p> Tarikh Lahir : {{d.dob | date: 'dd/MM/yyyy'}} </p> 
+
+            <p> Tarikh Kematian : {{d.dod | date: 'dd/MM/yyyy'}} </p> 
+
+            <p> Plot Kubur : {{d.plot}} </p>  
+          </ion-card-content>
+
+          <ion-item>
+            <ion-button slot="end" class="accept" (click)="accept(d.userid,d.name,d.dob,d.dod,d.plot,d.latitude,d.longitude)" size="medium" expand="block" color="success"><ion-icon slot="icon-only" name="checkmark" ></ion-icon></ion-button>
+            <ion-button slot="end" class="reject" (click)="reject(d.userid,d.name,d.dob,d.dod,d.plot)" size="medium" expand="block" color="danger"><ion-icon slot="icon-only" name="trash" ></ion-icon></ion-button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>  
+    
+   
+    
+  </ion-grid>
+</ion-content>

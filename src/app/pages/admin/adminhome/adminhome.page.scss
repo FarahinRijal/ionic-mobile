@@ -1,0 +1,43 @@
+
+.menu{
+    font-family: monospace;
+    font-size: 25px;
+
+}
+
+ion-title {
+    text-align: center;
+    margin-left: 52px;
+}
+
+ion-content{  
+    --background: #01a3a4;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+ion-card {
+    text-align: justify;
+    height: 85px;
+}
+
+ion-button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #293751;
+    text-align: center;
+}
+
+
+ion-toolbar{
+    background-color: #10ac84;
+}
+
+
+.new-background-color{
+    --background:#10ac84;
+  }
+  

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/admin-search" icon="arrow-undo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>🌏 Google Maps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <agm-map 
+  [latitude]="lat" 
+  [longitude]="lng"
+  [zoom]="18" 
+  [usePanning]="true">  
+  <agm-map-type-control></agm-map-type-control>
+    <agm-marker 
+    [latitude]="lat" 
+    [longitude]="lng" 
+    (markerClick)="clickedMarker(infowindow)">
+    
+
+    <agm-info-window #infowindow>
+        <strong>Maklumat</strong>
+        <p>Nama : {{nama}} <br/>
+        Plot Kubur : {{plot}}</p>
+      </agm-info-window>
+
+    </agm-marker>
+  </agm-map>
+  <ion-button (click)="navigateLocation()">Navigasi</ion-button>
+  <ion-button>Open AR</ion-button>
+  
+</ion-content>

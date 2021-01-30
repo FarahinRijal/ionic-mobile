@@ -1,0 +1,14 @@
+h2, ion-button, p{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ion-content{  
+    --background: #01a3a4;
+    // --background: #fff url('/assets/imgs/background.png') no-repeat center center / cover;
+}
+
+.new-background-color{
+    // --background: #009432;
+    --background:#10ac84;
+}

@@ -1,0 +1,365 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-undo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img src="/assets/imgs/banner2.png" style="height: 40px; text-align: center;"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>Maklum Balas</h2><br/>
+  <form [formGroup]="fbForm">
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            1. Jantina
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q1" [(ngModel)]="postData.q1">                       
+          <ion-item>
+            <ion-label>Lelaki</ion-label>
+            <ion-radio value="male"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Perempuan</ion-label>
+            <ion-radio value="female"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            2. Umur
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-input placeholder="Masukkan" autocomplete="off" type="text" formControlName="q2" [(ngModel)]="postData.q2" required></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            3. Taraf Pendidikan
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q3" [(ngModel)]="postData.q3">   
+          <ion-item>
+            <ion-label>Tiada Pendidikan Formal</ion-label>
+            <ion-radio value="none"></ion-radio>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>PMR</ion-label>
+            <ion-radio value="pmr"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>SPM</ion-label>
+            <ion-radio value="spm"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Diploma</ion-label>
+            <ion-radio value="diploma"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Ijazah Sarjana Muda</ion-label>
+            <ion-radio value="degree"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Ijazah Sarjana</ion-label>
+            <ion-radio value="master"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>PHD</ion-label>
+            <ion-radio value="phd"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Lain-lain</ion-label>
+            <ion-radio value="others"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            4. Pekerjaan
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-input placeholder="Masukkan" autocomplete="off" type="text" formControlName="q4" [(ngModel)]="postData.q4" required></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            5. Adakah ini pertama kali anda menggunakan aplikasi mudah alih?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q5" [(ngModel)]="postData.q5">                       
+          <ion-item>
+            <ion-label>Ya</ion-label>
+            <ion-radio value="yes"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Tidak</ion-label>
+            <ion-radio value="no"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            6. Adakah GeoPusara berfungsi dengan baik?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q6" [(ngModel)]="postData.q6">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            7. Adakah GeoPusara mudah digunakan?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q7" [(ngModel)]="postData.q7">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            8. Adakah GeoPusara memudahkan carian plot kubur?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q8" [(ngModel)]="postData.q8">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            9. Adakah GeoPusara sangat interaktif?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q9" [(ngModel)]="postData.q9">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            10. Adakah maklumat yang diberikan oleh GeoPusara betul?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q10" [(ngModel)]="postData.q10">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            11. Adakah maklumat yang diberikan membantu anda?
+          </ion-label>
+        </ion-list-header>
+        <ion-radio-group formControlName="q11" [(ngModel)]="postData.q11">                       
+          <ion-item>
+            <ion-label>Sangat Setuju</ion-label>
+            <ion-radio value="sangat setuju"></ion-radio>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Setuju</ion-label>
+            <ion-radio value="setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-radio value="neutral"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Tidak Setuju</ion-label>
+            <ion-radio value="tidak setuju"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sangat Tidak Setuju</ion-label>
+            <ion-radio value="sangat tidak setuju"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list-header>
+          <ion-label>
+            12. Nyatakan komen anda berkaitan aplikasi GeoPusara.
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-input placeholder="Masukkan" autocomplete="off" type="text" formControlName="q12" [(ngModel)]="postData.q12" required></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block" share="round" (click)="submit()" [disabled]="!fbForm.valid">Hantar</ion-button><br/> 
+  </form>
+</ion-content>
